@@ -14,7 +14,7 @@ const products = [
     },
     {
         _id: '2',
-        name: 'On-Ear Wireless Headphones',
+        name: 'Wireless Headphones',
         image: '/images/headphones.jpg',
         description:
           'Sleek, streamlined design that is durable and foldable to go everywhere you do',
@@ -53,7 +53,7 @@ const products = [
       },
       {
         _id: '5',
-        name: 'Logitech Gaming Mouse',
+        name: 'Logitech Mouse',
         image: '/images/mouse.jpg',
         description:
           'Get the upper hand on the competition with the Logitech G Pro X Superlight wireless gaming mouse',
