@@ -1,33 +1,33 @@
-import React from 'react'
-import { propTypes } from 'react-bootstrap/esm/Image'
-import {Card} from 'react-bootstrap'
-  //<h5>{product.name}</h5>
-  //<img src={product.image} alt="" />
+import React from "react";
+import { Card } from "react-bootstrap";
+import Ratings from "./Ratings";
+import { Link } from "react-router-dom";
+//<h5>{product.name}</h5>
+//<img src={product.image} alt="" />
 
-function Products({product}) {
+function Products({ product }) {
   return (
     <>
-  <Card className="my-3 p-3 rounded">
-    <a href={`/product/${product._id}`}>
-      <Card.Img variant="top" src={product.image} />
-    </a>
-      <Card.Body as="div">
-        <Card.Title>{product.name}</Card.Title>
+      <Card className="my-3 p-3 rounded">
+        <Link to={`/product/${product._id}`}>
+          <Card.Img variant="top" src={product.image} />
+        </Link>
+        <Card.Body as="div">
+          <Link to={`/product/${product._id}`}>
+            <Card.Title>{product.name}</Card.Title>
+          </Link>
           <Card.Text as="div">
-            <div className="my-3">
-              <h6>
-              {product.rating} from {product.numReviews} reviews
-              </h6>
-            </div>
+            <Ratings
+              value={product.rating}
+              text={`${product.numReviews} reviews`}
+            />
           </Card.Text>
-          
-          <Card.Text as="h5">
-            CAD ${product.price}
-          </Card.Text>
-      </Card.Body>
-  </Card>
+
+          <Card.Text as="h5">CAD ${product.price}</Card.Text>
+        </Card.Body>
+      </Card>
     </>
-  )
+  );
 }
 
-export default Products
+export default Products;
