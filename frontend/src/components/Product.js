@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import Ratings from "./Ratings";
 import { Link } from "react-router-dom";
+
 //<h5>{product.name}</h5>
 //<img src={product.image} alt="" />
 
